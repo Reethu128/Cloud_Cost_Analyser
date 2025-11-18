@@ -198,50 +198,6 @@ PROJECT STRUCTURE
 └── public/
 
 
- Key Features Demonstration
-Budget Alert System
-
-// Real-time budget monitoring
-Current Spending: ₹3,450 / ₹5,000 (69%)
-Status: On Track
-Prediction: Will exceed budget in 8 days
-Multi-Cloud Comparison
-AWS Total Cost:    ₹3,200
-Azure Total Cost:  ₹2,900 (9% cheaper)
-GCP Total Cost:    ₹2,750 (14% cheaper)
-AI Recommendations
-High Priority:
-✓ Switch to Reserved Instances → Save ₹8,500/month
-✓ Enable Auto-Scaling → Save ₹5,200/month
-
-Medium Priority:
-✓ Migrate to GP3 Storage → Save ₹3,100/month
-🔧 Configuration
-Environment Variables
-The project uses Lovable Cloud, which automatically configures:
-
-VITE_SUPABASE_URL - Backend API endpoint
-VITE_SUPABASE_PUBLISHABLE_KEY - Public API key
-VITE_SUPABASE_PROJECT_ID - Project identifier
- Deployment
-Deploy to Lovable
-Visit Lovable Project Dashboard
-Click "Publish" button
-Your app is live!
-Deploy to Other Platforms
-
-# Build production bundle
-npm run build
-
-# Deploy 'dist' folder to:
-# - Vercel
-# - Netlify
-# - AWS S3 + CloudFront
-# - Azure Static Web Apps
-# - Google Cloud Storage
-🤝 Contributing
-Contributions are welcome! Please follow these steps:
-
 🎓 Use Cases
 Enterprise FinOps Teams
 Multi-team cost allocation
