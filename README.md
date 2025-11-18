@@ -157,18 +157,17 @@ Navigate to Weekly Email Generator
 Review auto-generated summary
 Download as .txt file or export to PDF
 
-
- Project Structure
-cloud-cost-analyzer/
+PROJECT STRUCTURE
+ cloud-cost-analyzer/
 ├── src/
 │   ├── components/
-│   │   ├── dashboard/          # Dashboard widgets
+│   │   ├── dashboard/
 │   │   │   ├── MetricCard.tsx
 │   │   │   ├── CostTrendChart.tsx
 │   │   │   ├── ServiceBreakdown.tsx
 │   │   │   ├── ResourcesTable.tsx
 │   │   │   └── OptimizationPanel.tsx
-│   │   ├── ui/                 # shadcn/ui components
+│   │   ├── ui/
 │   │   ├── AIRecommendations.tsx
 │   │   ├── AnomalyDetection.tsx
 │   │   ├── BudgetAlerts.tsx
@@ -184,17 +183,17 @@ cloud-cost-analyzer/
 │   │   ├── TrendInsights.tsx
 │   │   └── WeeklyEmailGenerator.tsx
 │   ├── pages/
-│   │   ├── Index.tsx           # Main dashboard
+│   │   ├── Index.tsx
 │   │   └── NotFound.tsx
 │   ├── lib/
-│   │   ├── mockData.ts         # Sample data
-│   │   └── utils.ts            # Utility functions
+│   │   ├── mockData.ts
+│   │   └── utils.ts
 │   ├── integrations/
-│   │   └── supabase/           # Backend integration
+│   │   └── supabase/
 │   └── main.tsx
 ├── supabase/
 │   ├── functions/
-│   │   └── analyze-costs/      # AI edge function
+│   │   └── analyze-costs/
 │   └── config.toml
 └── public/
 
