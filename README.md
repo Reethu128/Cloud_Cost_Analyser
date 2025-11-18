@@ -1,52 +1,262 @@
-**Use your preferred IDE**
+CLOUD COST ANALYSER
+Intelligent Multi-Cloud Cost Optimization Platform
+A comprehensive FinOps dashboard for analyzing, forecasting, and optimizing cloud infrastructure costs across AWS, Azure, and GCP.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+🎯 Overview
+Cloud Cost Analyzer is a professional-grade FinOps tool designed to help organizations monitor, analyze, and optimize their cloud spending across multiple providers. Built with modern web technologies, it provides real-time insights, AI-powered recommendations, and actionable cost reduction strategies.
 
-Follow these steps:
+✨ Key Highlights
+ Multi-Cloud Support - Compare costs across AWS, Azure, and GCP
+ AI-Powered Insights - Machine learning-driven cost optimization recommendations
+ Predictive Analytics - Forecast future spending with trend analysis
+ Smart Alerts - Budget monitoring with proactive notifications
+ Tag Management - Segment costs by environment, department, or project
+ Automated Reporting - Generate weekly cost summaries and export to PDF
+ Real-time Analysis - Instant visualization of spending patterns
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+🚀 Features
+1. Budget Alerts System :
+Set monthly budget thresholds
+Real-time tracking of spending vs budget
+Predictive alerts: "You will cross your ₹5,000 budget in 8 days"
+Visual progress indicators with percentage breakdowns
+2. Tag-Based Cost Segmentation :
+Filter costs by Environment (Production, Testing, Development)
+Department-level analysis (AI Team, Backend Team, etc.)
+Project-wise breakdown (Research, SIH, College App)
+Multi-select filtering for granular insights
+3. AI-Powered Cost Reduction Strategies :
+Automated analysis of spending patterns
+Intelligent recommendations:
+Reserved instance optimization
+Spot instance suggestions
+Storage tier migration (hot → cold)
+Idle resource identification
+Priority-based action items (High, Medium, Low)
+4. Hourly Scheduling Simulator :
+Calculate savings from automated shutdowns
+Simulate night-time instance termination (8 PM - 8 AM)
+Weekend shutdown scenarios
+ROI calculator for automation implementation
+5. Multi-Cloud Cost Comparison :
+Side-by-side comparison of AWS, Azure, and GCP pricing
+Storage tier analysis across providers:
+AWS: S3 Standard, S3 IA, Glacier
+Azure: Hot, Cool, Archive
+GCP: Standard, Nearline, Coldline, Archive
+Migration cost calculator
+Best value recommendations
+6. Trend Insights & Analytics :
+Auto-generated spending summaries
+Pattern recognition (stable, increasing, decreasing)
+Service-level trend analysis
+Anomaly highlighting
+7. Cost Forecasting :
+30-day cost predictions using linear regression
+Confidence intervals and prediction accuracy
+Visual trend lines with historical data
+Budget impact projections
+8. Anomaly Detection :
+Automatic spike detection
+Unusual spending pattern alerts
+Root cause analysis
+Historical anomaly tracking
+9. Weekly Email Generator :
+Automated cost summary generation
+Key metrics and insights
+Downloadable .txt format
+Customizable reporting periods
+10. Export & Reporting :
+PDF export with charts and tables
+CSV data export
+Custom date range selection
+Professional formatting
+11. Savings Calculator :
+Reserved instance savings estimator
+Spot instance cost reduction calculator
+Storage tier migration savings
+Right-sizing recommendations
+
+🛠️ Tech Stack
+Frontend:
+React 18.3 - UI framework
+TypeScript - Type safety
+Vite - Build tool & dev server
+Tailwind CSS - Utility-first styling
+shadcn/ui - Component library
+
+Data Visualization:
+Recharts - Interactive charts and graphs
+Lucide React - Icon library
+
+Backend & AI:
+Supabase - Database & authentication
+Edge Functions - Serverless AI processing
+Gemini AI - Cost optimization recommendations
+Additional Libraries
+React Hook Form - Form management
+Zod - Schema validation
+jsPDF - PDF generation
+date-fns - Date manipulation
+Sonner - Toast notifications
+
+Installation
+Prerequisites
+Node.js 18+ and npm
+Git
+Setup Steps
+
+# Clone the repository
 git clone <YOUR_GIT_URL>
+cd cloud-cost-analyzer
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
-```
+The application will be available at http://localhost:5173
 
-**Edit a file directly in GitHub**
+Build for Production
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+npm run build
+npm run preview
 
-**Use GitHub Codespaces**
+ Usage Guide
+1. Upload Cost Data
+Click the "Upload CSV" button in the Data Upload section
+Select your cloud billing CSV file
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Supported format:
 
-## What technologies are used for this project?
+Service,UsageHours,StorageGB,Cost,Date
+Compute,50,0,120,2024-01-15
+Storage,0,100,30,2024-01-15
+Database,20,10,40,2024-01-15
+2. Set Budget Alerts
+Navigate to Budget Alerts section
+Set your monthly budget threshold
+Monitor real-time spending progress
+Receive predictive alerts before exceeding budget
+3. Filter by Tags
+Use Tag Filters panel to segment costs
+Select environment, department, or project
+Combine multiple filters for detailed analysis
+4. Get AI Recommendations
+View AI-powered optimization strategies
+Click on recommendations for detailed implementation steps
+Apply suggestions to reduce costs
+5. Compare Cloud Providers
+Use Cloud Comparison tool
+Select services to compare
+View pricing differences across AWS, Azure, and GCP
+Calculate migration savings
+6. Generate Reports
+Navigate to Weekly Email Generator
+Review auto-generated summary
+Download as .txt file or export to PDF
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+ Project Structure
+cloud-cost-analyzer/
+├── src/
+│   ├── components/
+│   │   ├── dashboard/          # Dashboard widgets
+│   │   │   ├── MetricCard.tsx
+│   │   │   ├── CostTrendChart.tsx
+│   │   │   ├── ServiceBreakdown.tsx
+│   │   │   ├── ResourcesTable.tsx
+│   │   │   └── OptimizationPanel.tsx
+│   │   ├── ui/                 # shadcn/ui components
+│   │   ├── AIRecommendations.tsx
+│   │   ├── AnomalyDetection.tsx
+│   │   ├── BudgetAlerts.tsx
+│   │   ├── CloudComparison.tsx
+│   │   ├── CostForecast.tsx
+│   │   ├── CostReductionStrategies.tsx
+│   │   ├── DataUpload.tsx
+│   │   ├── ExportReport.tsx
+│   │   ├── SavingsCalculator.tsx
+│   │   ├── SchedulingSimulator.tsx
+│   │   ├── SplashScreen.tsx
+│   │   ├── TagFilters.tsx
+│   │   ├── TrendInsights.tsx
+│   │   └── WeeklyEmailGenerator.tsx
+│   ├── pages/
+│   │   ├── Index.tsx           # Main dashboard
+│   │   └── NotFound.tsx
+│   ├── lib/
+│   │   ├── mockData.ts         # Sample data
+│   │   └── utils.ts            # Utility functions
+│   ├── integrations/
+│   │   └── supabase/           # Backend integration
+│   └── main.tsx
+├── supabase/
+│   ├── functions/
+│   │   └── analyze-costs/      # AI edge function
+│   └── config.toml
+└── public/
 
 
-Yes, you can!
+ Key Features Demonstration
+Budget Alert System
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+// Real-time budget monitoring
+Current Spending: ₹3,450 / ₹5,000 (69%)
+Status: On Track
+Prediction: Will exceed budget in 8 days
+Multi-Cloud Comparison
+AWS Total Cost:    ₹3,200
+Azure Total Cost:  ₹2,900 (9% cheaper)
+GCP Total Cost:    ₹2,750 (14% cheaper)
+AI Recommendations
+High Priority:
+✓ Switch to Reserved Instances → Save ₹8,500/month
+✓ Enable Auto-Scaling → Save ₹5,200/month
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Medium Priority:
+✓ Migrate to GP3 Storage → Save ₹3,100/month
+🔧 Configuration
+Environment Variables
+The project uses Lovable Cloud, which automatically configures:
+
+VITE_SUPABASE_URL - Backend API endpoint
+VITE_SUPABASE_PUBLISHABLE_KEY - Public API key
+VITE_SUPABASE_PROJECT_ID - Project identifier
+ Deployment
+Deploy to Lovable
+Visit Lovable Project Dashboard
+Click "Publish" button
+Your app is live!
+Deploy to Other Platforms
+
+# Build production bundle
+npm run build
+
+# Deploy 'dist' folder to:
+# - Vercel
+# - Netlify
+# - AWS S3 + CloudFront
+# - Azure Static Web Apps
+# - Google Cloud Storage
+🤝 Contributing
+Contributions are welcome! Please follow these steps:
+
+🎓 Use Cases
+Enterprise FinOps Teams
+Multi-team cost allocation
+Budget enforcement
+Optimization tracking
+Cloud Architects
+Infrastructure cost planning
+Migration cost analysis
+Right-sizing recommendations
+Startups & SMBs
+Cost-conscious scaling
+Budget monitoring
+Waste reduction
+Educational Projects
+Cloud computing coursework
+FinOps certification preparation
+DevOps portfolio projects
